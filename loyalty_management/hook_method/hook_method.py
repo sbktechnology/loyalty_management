@@ -4,7 +4,6 @@ from frappe.model.document import Document
 
 @frappe.whitelist(allow_guest=True)
 def point_updator(self, method):
-	frappe.msgprint("in save")
 	customer_doc=frappe.get_doc("Customer",self.customer)
 	customer_doc.total_point_collected = customer_doc.total_point_collected + self.grand_total_point_value
 	customer_doc.save()
