@@ -72,6 +72,12 @@ fixtures = ["Custom Field",
 # ---------------
 # Hook on document methods and events
 
+doc_events = {
+	"Sales Order": {
+		"on_submit": "loyalty_management.hook_method.hook_method.point_updator"
+	}
+}
+
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
