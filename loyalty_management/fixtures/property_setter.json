@@ -365,19 +365,6 @@
  }, 
  {
   "default_value": null, 
-  "doc_type": "Sales Order", 
-  "docstatus": 0, 
-  "doctype": "Property Setter", 
-  "doctype_or_field": "DocType", 
-  "field_name": null, 
-  "modified": "2015-12-17 17:17:56.929585", 
-  "name": "Sales Order-_idx", 
-  "property": "_idx", 
-  "property_type": "Text", 
-  "value": "[\"customer_section\", \"column_break0\", \"title\", \"naming_series\", \"customer\", \"customer_name\", \"address_display\", \"contact_display\", \"contact_mobile\", \"contact_email\", \"order_type\", \"column_break1\", \"amended_from\", \"company\", \"transaction_date\", \"delivery_date\", \"po_no\", \"po_date\", \"shipping_address_name\", \"shipping_address\", \"currency_and_price_list\", \"currency\", \"conversion_rate\", \"column_break2\", \"selling_price_list\", \"price_list_currency\", \"plc_conversion_rate\", \"ignore_pricing_rule\", \"items_section\", \"items\", \"section_break_31\", \"column_break_33a\", \"base_total\", \"base_net_total\", \"column_break_33\", \"total\", \"net_total\", \"grand_total_point_value\", \"taxes_section\", \"taxes_and_charges\", \"column_break_38\", \"shipping_rule\", \"section_break_40\", \"taxes\", \"other_charges_calculation\", \"section_break_43\", \"base_total_taxes_and_charges\", \"column_break_46\", \"total_taxes_and_charges\", \"section_break_48\", \"apply_discount_on\", \"column_break_50\", \"discount_amount\", \"base_discount_amount\", \"totals\", \"base_grand_total\", \"base_rounded_total\", \"base_in_words\", \"column_break3\", \"grand_total\", \"rounded_total\", \"in_words\", \"advance_paid\", \"packing_list\", \"packed_items\", \"terms_section_break\", \"tc_name\", \"terms\", \"contact_info\", \"col_break45\", \"territory\", \"customer_group\", \"col_break46\", \"customer_address\", \"contact_person\", \"more_info\", \"project_name\", \"fiscal_year\", \"column_break_77\", \"source\", \"campaign\", \"printing_details\", \"letter_head\", \"column_break4\", \"select_print_heading\", \"section_break_78\", \"status\", \"delivery_status\", \"per_delivered\", \"column_break_81\", \"per_billed\", \"billing_status\", \"sales_team_section_break\", \"sales_partner\", \"column_break7\", \"commission_rate\", \"total_commission\", \"section_break1\", \"sales_team\", \"recurring_order\", \"is_recurring\", \"recurring_type\", \"from_date\", \"to_date\", \"repeat_on_day_of_month\", \"end_date\", \"column_break83\", \"next_date\", \"recurring_id\", \"notification_email_address\", \"recurring_print_format\"]"
- }, 
- {
-  "default_value": null, 
   "doc_type": "Sales Order Item", 
   "docstatus": 0, 
   "doctype": "Property Setter", 
@@ -404,19 +391,6 @@
  }, 
  {
   "default_value": null, 
-  "doc_type": "Sales Order", 
-  "docstatus": 0, 
-  "doctype": "Property Setter", 
-  "doctype_or_field": "DocType", 
-  "field_name": null, 
-  "modified": "2015-12-17 18:57:19.737297", 
-  "name": "Sales Order-read_only_onload", 
-  "property": "read_only_onload", 
-  "property_type": "Check", 
-  "value": null
- }, 
- {
-  "default_value": null, 
   "doc_type": "Customer", 
   "docstatus": 0, 
   "doctype": "Property Setter", 
@@ -437,6 +411,32 @@
   "field_name": null, 
   "modified": "2015-12-17 19:25:47.674769", 
   "name": "Customer-read_only_onload", 
+  "property": "read_only_onload", 
+  "property_type": "Check", 
+  "value": null
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Sales Order", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocType", 
+  "field_name": null, 
+  "modified": "2015-12-22 16:38:54.236156", 
+  "name": "Sales Order-_idx", 
+  "property": "_idx", 
+  "property_type": "Text", 
+  "value": "[\"customer_section\", \"column_break0\", \"title\", \"naming_series\", \"customer\", \"customer_name\", \"address_display\", \"contact_display\", \"contact_mobile\", \"contact_email\", \"order_type\", \"column_break1\", \"amended_from\", \"company\", \"transaction_date\", \"delivery_date\", \"po_no\", \"po_date\", \"shipping_address_name\", \"shipping_address\", \"currency_and_price_list\", \"currency\", \"conversion_rate\", \"column_break2\", \"selling_price_list\", \"price_list_currency\", \"plc_conversion_rate\", \"ignore_pricing_rule\", \"items_section\", \"items\", \"section_break_31\", \"column_break_33a\", \"base_total\", \"base_net_total\", \"column_break_33\", \"total\", \"net_total\", \"grand_total_point_value\", \"claim_status\", \"taxes_section\", \"taxes_and_charges\", \"column_break_38\", \"shipping_rule\", \"section_break_40\", \"taxes\", \"other_charges_calculation\", \"section_break_43\", \"base_total_taxes_and_charges\", \"column_break_46\", \"total_taxes_and_charges\", \"section_break_48\", \"apply_discount_on\", \"column_break_50\", \"discount_amount\", \"base_discount_amount\", \"totals\", \"base_grand_total\", \"base_rounded_total\", \"base_in_words\", \"column_break3\", \"grand_total\", \"rounded_total\", \"in_words\", \"advance_paid\", \"packing_list\", \"packed_items\", \"terms_section_break\", \"tc_name\", \"terms\", \"contact_info\", \"col_break45\", \"territory\", \"customer_group\", \"col_break46\", \"customer_address\", \"contact_person\", \"more_info\", \"project_name\", \"fiscal_year\", \"column_break_77\", \"source\", \"campaign\", \"printing_details\", \"letter_head\", \"column_break4\", \"select_print_heading\", \"section_break_78\", \"status\", \"delivery_status\", \"per_delivered\", \"column_break_81\", \"per_billed\", \"billing_status\", \"sales_team_section_break\", \"sales_partner\", \"column_break7\", \"commission_rate\", \"total_commission\", \"section_break1\", \"sales_team\", \"recurring_order\", \"is_recurring\", \"recurring_type\", \"from_date\", \"to_date\", \"repeat_on_day_of_month\", \"end_date\", \"column_break83\", \"next_date\", \"recurring_id\", \"notification_email_address\", \"recurring_print_format\"]"
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Sales Order", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocType", 
+  "field_name": null, 
+  "modified": "2015-12-22 16:55:10.807714", 
+  "name": "Sales Order-read_only_onload", 
   "property": "read_only_onload", 
   "property_type": "Check", 
   "value": null
