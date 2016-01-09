@@ -8,25 +8,25 @@ from frappe.model.document import Document
 
 class Coupon(Document):
 	def on_submit(self):
-		frappe.msgprint("hi from cpn")
 		# cost_center = frappe.db.get_value("Company", ref_doc.company, "cost_center")
-		company_abbr = frappe.db.get_value("Company", self.company, "abbr")
-		doc_jv_creation=frappe.new_doc("Journal Entry")
-		# doc_jv_creation.standards = r.get("standard")
-		doc_jv_creation.posting_date=self.date_of_issue
-		doc_jv_creation.append("accounts", {
-		"account": "Cash Coupon Owe - "+company_abbr,
-		"cost_center": self.cost_center,
-		"credit_in_account_currency": self.coupon_value,
-		})
-		doc_jv_creation.append("accounts", {
-		"account": "Cash Coupon - "+company_abbr,
-		"cost_center": self.cost_center,
-		"debit_in_account_currency": self.coupon_value,
-		})
-		doc_jv_creation.save()
-		doc_jv_creation.user_remark=self.name
-		doc_jv_creation.submit()
+		if self.date_of_issue and self.company:
+			company_abbr = frappe.db.get_value("Company", self.company, "abbr")
+			doc_jv_creation=frappe.new_doc("Journal Entry")
+			# doc_jv_creation.standards = r.get("standard")
+			doc_jv_creation.posting_date=self.date_of_issue
+			doc_jv_creation.append("accounts", {
+			"account": "Cash Coupon Owe - "+company_abbr,
+			"cost_center": self.cost_center,
+			"credit_in_account_currency": self.coupon_value,
+			})
+			doc_jv_creation.append("accounts", {
+			"account": "Cash Coupon - "+company_abbr,
+			"cost_center": self.cost_center,
+			"debit_in_account_currency": self.coupon_value,
+			})
+			doc_jv_creation.save()
+			doc_jv_creation.user_remark=self.name
+			doc_jv_creation.submit()
 		# frappe.msgprint("jv saved")
 
 	# def get_payment_entry(ref_doc, args):
