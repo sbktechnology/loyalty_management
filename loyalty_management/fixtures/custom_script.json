@@ -3,9 +3,9 @@
   "docstatus": 0, 
   "doctype": "Custom Script", 
   "dt": "Sales Order", 
-  "modified": "2015-12-17 18:56:43.616423", 
+  "modified": "2016-01-10 17:12:53.808094", 
   "name": "Sales Order-Client", 
-  "script": "frappe.ui.form.on(\"Sales Order Item\", \"item_point_value\", function(frm, cdt, cdn) {\n    var d = locals[cdt][cdn];\n    d.total_point_value=d.item_point_value*d.qty\n    refresh_field('items');\n});\nfrappe.ui.form.on(\"Sales Order Item\", \"qty\", function(frm, cdt, cdn) {\n    var d = locals[cdt][cdn];\n    d.total_point_value=d.item_point_value*d.qty\n    refresh_field('items');\n});\nfrappe.ui.form.on(\"Sales Order\", \"validate\", function(frm) {\n   var grand_total_point_value = 0;\n   if(frm.doc.items){\n   for(i=0;i<frm.doc.items.length;i++){\n       grand_total_point_value= grand_total_point_value +frm.doc.items[i].total_point_value;\n\n    }} \n    frm.doc.grand_total_point_value =grand_total_point_value;\n\n});\n", 
+  "script": "frappe.ui.form.on(\"Sales Order Item\", \"item_point_value\", function(frm, cdt, cdn) {\n    var d = locals[cdt][cdn];\n    d.total_item_point_value=d.item_point_value*d.qty\n    refresh_field('items');\n});\nfrappe.ui.form.on(\"Sales Order Item\", \"qty\", function(frm, cdt, cdn) {\n    var d = locals[cdt][cdn];\n    d.total_item_point_value=d.item_point_value*d.qty\n    refresh_field('items');\n});\nfrappe.ui.form.on(\"Sales Order\", \"validate\", function(frm) {\n   var grand_total_item_point = 0;\n   if(frm.doc.items){\n   for(i=0;i<frm.doc.items.length;i++){\n       grand_total_item_point= grand_total_item_point +frm.doc.items[i].total_item_point_value;\n\n    }} \n    frm.doc.grand_total_item_point =grand_total_item_point;\n\n});\n", 
   "script_type": "Client"
  }, 
  {

@@ -9,7 +9,7 @@ from frappe.model.document import Document
 class Coupon(Document):
 	def on_submit(self):
 		# cost_center = frappe.db.get_value("Company", ref_doc.company, "cost_center")
-		if self.date_of_issue and self.company:
+		if self.date_of_issue and self.company and self.is_bulk==0:
 			company_abbr = frappe.db.get_value("Company", self.company, "abbr")
 			doc_jv_creation=frappe.new_doc("Journal Entry")
 			# doc_jv_creation.standards = r.get("standard")
@@ -27,7 +27,7 @@ class Coupon(Document):
 			doc_jv_creation.save()
 			doc_jv_creation.user_remark=self.name
 			doc_jv_creation.submit()
-		# frappe.msgprint("jv saved")
+			frappe.msgprint(doc_jv_creation.name+" is Submited")
 
 	# def get_payment_entry(ref_doc, args):
 	# cost_center = frappe.db.get_value("Company", ref_doc.company, "cost_center")
