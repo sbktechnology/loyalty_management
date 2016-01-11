@@ -48,3 +48,14 @@ class CashCouponTool(Document):
 			doc_jv_creation.user_remark=self.coupon_code+" - Bulk"
 			doc_jv_creation.submit()
 			frappe.msgprint(doc_jv_creation.name+" is Submited")
+
+	def get_details(self):
+		# dl = frappe.db.sql("""select name,tem_point,customer from `tabSales Order` where customer=%s and docstatus=1 and claim_status NOT IN ('Claimed','Expired'); """,(self.customer),as_dict=1, debug=1)
+
+		dl = frappe.db.sql("""select name from `tabCoupon` where name BETWEEN %s AND %s""",(self.start_coupon, self.end_coupon),as_dict=1, debug=1)
+
+		self.set('cash_coupon_bulk_print', [])
+		for d in dl:
+			nl = self.append('cash_coupon_bulk_print', {})
+			nl.coupon = d.name
+

@@ -36,6 +36,15 @@ frappe.ui.form.on("Cash Coupon Tool", {
 	// 		}
 	// 	});
 	// },
+	get_relevant_entries: function(frm) {
+		return frappe.call({
+			method: "get_details",
+			doc: frm.doc,
+			callback: function(r, rt) {
+				frm.refresh()
+			}
+		});
+	},
 	create_coupons: function(frm) {
 		return frappe.call({
 			method: "create_coupons",

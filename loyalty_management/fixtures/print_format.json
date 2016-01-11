@@ -94,5 +94,21 @@
   "print_format_builder": 0, 
   "print_format_type": "Server", 
   "standard": "Yes"
+ }, 
+ {
+  "css": null, 
+  "custom_format": 1, 
+  "disabled": 0, 
+  "doc_type": "Cash Coupon Tool", 
+  "docstatus": 0, 
+  "doctype": "Print Format", 
+  "font": "Default", 
+  "format_data": null, 
+  "html": "{%- for row in doc.cash_coupon_bulk_print -%}\n{% set u = frappe.get_doc(\"Coupon\", row.coupon) %}\n<div class=\"row\">        \n     <div class=\"col-xs-6\">            \n        <div class=\"row\">\n            <div class=\"col-xs-5 text-right\"><label>Bulk Code</label></div>\n            <div class=\"col-xs-7 \">{{ doc.coupon_code or ''}}</div>\n        </div> \n        <div class=\"row\"> \n            <div class=\"col-xs-5 text-right\"><label>Coupon Code</label></div>\n            <div class=\"col-xs-7 \">{{ u.name or '' }} </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-xs-5 text-right\"><label>Coupon Value</label></div>\n            <div class=\"col-xs-7 \">{{ u.coupon_value or ''}}</div>\n        </div>         \n    </div>\n\n    <div class=\"col-xs-6\">\n        <div class=\"row\">\n            <div class=\"col-xs-5 text-right\"><label>Date of Issue</label></div>\n            <div class=\"col-xs-7 \">{{ u.get_formatted(\"date_of_issue\") or ''}}</div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-xs-5 text-right\"> <label>Date of Expiry</label> </div>\n            <div class=\"col-xs-7 \">\n                {{ u.get_formatted(\"date_of_expiry\") or ''}}</div>\n        </div>    \n    </div>\n            \n</div>\n<br>\n\n<hr>\n{%- endfor -%}", 
+  "modified": "2016-01-11 20:03:00.153618", 
+  "name": "Bulk Coupon", 
+  "print_format_builder": 0, 
+  "print_format_type": "Server", 
+  "standard": "No"
  }
 ]
