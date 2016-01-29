@@ -557,5 +557,57 @@
   "property": "read_only_onload", 
   "property_type": "Check", 
   "value": null
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Item", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocType", 
+  "field_name": null, 
+  "modified": "2016-01-29 17:07:21.522799", 
+  "name": "Item-read_only_onload", 
+  "property": "read_only_onload", 
+  "property_type": "Check", 
+  "value": null
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Item", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocType", 
+  "field_name": null, 
+  "modified": "2016-01-29 17:07:22.892621", 
+  "name": "Item-_idx", 
+  "property": "_idx", 
+  "property_type": "Text", 
+  "value": "[\"name_and_description_section\", \"naming_series\", \"item_code\", \"variant_of\", \"item_name\", \"item_group\", \"stock_uom\", \"column_break0\", \"is_master_promo\", \"is_stock_item\", \"disabled\", \"image\", \"image_view\", \"section_break_11\", \"brand\", \"barcode\", \"description\", \"inventory\", \"default_warehouse\", \"end_of_life\", \"has_batch_no\", \"has_serial_no\", \"serial_no_series\", \"is_asset_item\", \"column_break1\", \"tolerance\", \"valuation_method\", \"warranty_period\", \"net_weight\", \"weight_uom\", \"reorder_section\", \"re_order_level\", \"re_order_qty\", \"apply_warehouse_wise_reorder_level\", \"section_break_31\", \"reorder_levels\", \"variants_section\", \"has_variants\", \"attributes\", \"purchase_details\", \"is_purchase_item\", \"min_order_qty\", \"lead_time_days\", \"buying_cost_center\", \"expense_account\", \"unit_of_measure_conversion\", \"uoms\", \"last_purchase_rate\", \"supplier_details\", \"default_supplier\", \"delivered_by_supplier\", \"manufacturer\", \"manufacturer_part_no\", \"column_break2\", \"supplier_items\", \"sales_details\", \"is_sales_item\", \"is_service_item\", \"publish_in_hub\", \"synced_with_hub\", \"income_account\", \"selling_cost_center\", \"column_break3\", \"customer_items\", \"max_discount\", \"item_tax_section_break\", \"taxes\", \"inspection_criteria\", \"inspection_required\", \"quality_parameters\", \"manufacturing\", \"is_pro_applicable\", \"is_sub_contracted_item\", \"column_break_74\", \"default_bom\", \"customer_code\", \"website_section\", \"show_in_website\", \"page_name\", \"weightage\", \"slideshow\", \"website_image\", \"thumbnail\", \"cb72\", \"website_warehouse\", \"website_item_groups\", \"sb72\", \"copy_from_item_group\", \"website_specifications\", \"web_long_description\", \"parent_website_route\"]"
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Pricing Rule", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocType", 
+  "field_name": null, 
+  "modified": "2016-01-29 17:11:18.856527", 
+  "name": "Pricing Rule-read_only_onload", 
+  "property": "read_only_onload", 
+  "property_type": "Check", 
+  "value": null
+ }, 
+ {
+  "default_value": null, 
+  "doc_type": "Pricing Rule", 
+  "docstatus": 0, 
+  "doctype": "Property Setter", 
+  "doctype_or_field": "DocType", 
+  "field_name": null, 
+  "modified": "2016-01-29 17:11:19.951565", 
+  "name": "Pricing Rule-_idx", 
+  "property": "_idx", 
+  "property_type": "Text", 
+  "value": "[\"applicability_section\", \"title\", \"apply_on\", \"item_code\", \"master_promo\", \"brand\", \"item_group\", \"column_break_7\", \"priority\", \"disable\", \"section_break_7\", \"selling\", \"buying\", \"column_break_11\", \"applicable_for\", \"customer\", \"customer_group\", \"territory\", \"sales_partner\", \"campaign\", \"supplier\", \"supplier_type\", \"section_break_19\", \"min_qty\", \"column_break_21\", \"max_qty\", \"section_break_23\", \"valid_from\", \"valid_upto\", \"col_break1\", \"company\", \"price_discount_section\", \"price_or_discount\", \"col_break2\", \"price\", \"discount_percentage\", \"for_price_list\", \"help_section\", \"pricing_rule_help\"]"
  }
 ]
